@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>srfCalculator</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <link type="text/css" rel="stylesheet" media="screen" href="../css/index.css">
+</head>
+<body>
+    <!-- main area -->
+    <div class="srf-layout-main">
+        <!-- top navigation panel -->
+        <section class="srf-layout-navigation">
+            <label class="srf-brand">srfCalculator</label>
+            <a id="srf-about" onclick="dialogAbout()">About</a>
+        </section>
+        <!-- main display area -->
+        <textarea id="srf-input-main"></textarea>
+        <!-- memory buttons -->
+        <section class="srf-layout-button-decimal-place">
+            <button class="srf-button-memory" id="button-memory-recall">MR</button>
+            <button class="srf-button-memory" id="button-memory-clear">MC</button>
+            <button class="srf-button-memory" id="button-memory-plus">M+</button>
+            <button class="srf-button-memory" id="button-memory-equal">M=</button>
+            <!-- decimal place -->
+            <select id="select-decimal-place">
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="6">7</option>
+                <option value="7">8</option>
+            </select>
+        </section>
+        <!-- memory input area & clear buttons -->
+        <section class="srf-layout-memory">
+            <input id="input-memory" type="text" onkeypress="memoryNumberInput(event)" />
+            <button class="srf-button-clear" id="button-clear-all" onclick="clearAll()">CA</button>
+            <button class="srf-button-clear" id="button-clear" onclick="clear()">C</button>
+        </section>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="../dist/renderer.js"></script>
+    <script src="../dist/preload.js.map"></script>
+    <script src="../dist/index.js"></script>
+</body>
+</html>

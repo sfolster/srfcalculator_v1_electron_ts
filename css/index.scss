@@ -1,0 +1,112 @@
+//set global variables
+@font-face {
+    font-family: 'Nunito';
+    src: url(../asset/font/nunito-v20-latin-regular.woff2) format('woff');
+}
+//global variables
+$border-radius: 8px;
+$button-font-size: 20px;
+$color-black: black;
+$color-white: white;
+$color-lightgrey: lightgrey;
+$color-grey: grey;
+$font-family: 'Nunito','Roboto', Arial, Helvetica, sans-serif;
+$font-size: 16px;
+$primary-green: hsl(120, 100%, 37%);
+
+html,
+body {
+    background-color: $color-lightgrey;
+    font-family: $font-family;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    //width: 300px;
+}
+//main layout
+.srf-layout-main {
+    background-color: $color-lightgrey;
+    display: grid;
+    grid-template-rows: 40px auto 40px 40px;
+    height: 100%;
+    //navigation bar
+    .srf-layout-navigation {
+        background-color: $primary-green;
+        padding: 4px 14px 0px 12px;
+        //about link in navigation bar
+        #srf-about {
+            color: $color-white;
+            float: right;
+            font-family: $font-family;
+            font-size: 14px;
+            padding-top: 7px;
+            text-align: right;
+        }
+        //brand in navigation bar
+        .srf-brand {
+            color: $color-white;
+            font-family: $font-family;
+            font-size: 24px;
+            text-align: left;
+        }
+    }
+    //text area
+    #srf-input-main {
+        border: none;
+        border-radius: $border-radius;
+        flex-grow: 1;
+        font-family: $font-family;
+        font-size: $font-size;
+        margin: 2px;
+        padding-left: 10px;
+        padding-top: 10px;
+        resize: none;
+    }
+    //memory button layout
+    .srf-layout-button-decimal-place {
+        background-color: $color-lightgrey;
+        display: grid;
+        gap: 2px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+        padding: 0px 2px 2px 2px;
+        //memory buttons
+        .srf-button-memory {
+            background: $primary-green;
+            border: none;
+            border-radius: $border-radius;
+            color: $color-white;
+            font-family: $font-family;
+            font-size: $button-font-size;
+        }
+        //decimal place selector
+        #select-decimal-place {
+            border: none;
+            border-radius: $border-radius;
+            font-family: $font-family;
+            font-size: $button-font-size;
+        }
+    }
+    //memory input and clear buttons
+    .srf-layout-memory {
+        background-color: $color-lightgrey;
+        display: grid;
+        gap: 2px;
+        grid-template-columns: auto 0.45fr 0.45fr;
+        padding: 0px 2px 2px 2px;
+        //memory input field
+        #input-memory {
+            border: none;
+            border-radius: $border-radius;
+        }
+        //clear buttons
+        .srf-button-clear {
+            background-color: $color-grey;
+            border: none;
+            border-radius: $border-radius;
+            color: $color-white;
+            font-family: $font-family;
+            font-size: $button-font-size;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "srfcalculator_v1_electron_ts",
+  "version": "1.0.0",
+  "description": "Calculator developed with electron and typescript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run build && electron ./dist/main.js"
+  },
+  "author": "Stephen Folster",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "electron": "^17.1.2",
+    "typescript": "^4.6.2"
+  }
+}
