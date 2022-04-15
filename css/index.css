@@ -1,7 +1,8 @@
 @font-face {
-  font-family: "Nunito";
+  font-family: 'Nunito';
   src: url(../asset/font/nunito-v20-latin-regular.woff2) format("woff");
 }
+
 html,
 body {
   background-color: lightgrey;
@@ -14,14 +15,18 @@ body {
 
 .srf-layout-main {
   background-color: lightgrey;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 40px auto 40px 40px;
+  -ms-grid-rows: 40px auto 40px 40px;
+      grid-template-rows: 40px auto 40px 40px;
   height: 100%;
 }
+
 .srf-layout-main .srf-layout-navigation {
   background-color: #00bd00;
   padding: 4px 14px 0px 12px;
 }
+
 .srf-layout-main .srf-layout-navigation #srf-about {
   color: white;
   float: right;
@@ -30,16 +35,20 @@ body {
   padding-top: 7px;
   text-align: right;
 }
+
 .srf-layout-main .srf-layout-navigation .srf-brand {
   color: white;
   font-family: "Nunito", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 24px;
   text-align: left;
 }
+
 .srf-layout-main #srf-input-main {
   border: none;
   border-radius: 8px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-family: "Nunito", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   margin: 2px;
@@ -47,13 +56,17 @@ body {
   padding-top: 10px;
   resize: none;
 }
+
 .srf-layout-main .srf-layout-button-decimal-place {
   background-color: lightgrey;
+  display: -ms-grid;
   display: grid;
   gap: 2px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 0.5fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
   padding: 0px 2px 2px 2px;
 }
+
 .srf-layout-main .srf-layout-button-decimal-place .srf-button-memory {
   background: #00bd00;
   border: none;
@@ -62,23 +75,29 @@ body {
   font-family: "Nunito", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
+
 .srf-layout-main .srf-layout-button-decimal-place #select-decimal-place {
   border: none;
   border-radius: 8px;
   font-family: "Nunito", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
+
 .srf-layout-main .srf-layout-memory {
   background-color: lightgrey;
+  display: -ms-grid;
   display: grid;
   gap: 2px;
-  grid-template-columns: auto 0.45fr 0.45fr;
+  -ms-grid-columns: auto 0.45fr 0.45fr;
+      grid-template-columns: auto 0.45fr 0.45fr;
   padding: 0px 2px 2px 2px;
 }
+
 .srf-layout-main .srf-layout-memory #input-memory {
   border: none;
   border-radius: 8px;
 }
+
 .srf-layout-main .srf-layout-memory .srf-button-clear {
   background-color: grey;
   border: none;
@@ -87,5 +106,4 @@ body {
   font-family: "Nunito", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
-
 /*# sourceMappingURL=index.css.map */
